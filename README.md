@@ -60,6 +60,10 @@ instructed in the output of vite) in your browser to see the frontend.
 Like always, this terminal is then unusable, as it is occupied by the vite
 server, so you will need to open another terminal if need be.
 
+Here's how it works
+
+![](vite.excalidraw.svg)
+
 ## Deployment notes
 
 FYI, the server is written in Python using FastAPI; it is deliberately, and in
