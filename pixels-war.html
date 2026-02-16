@@ -3,31 +3,35 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixel War ue22-p23</title>
+    <title>Pixels War UE22</title>
     <link rel="stylesheet" href="./pixels-war.css" />
     <script src="./pixels-war.js" defer></script>
 </head>
 
 <body>
     <div id="connect-dialog">
-        <span>
-            <label for="baseurl">url:</label>
-            <input id="baseurl" type="text">
+        <span class="field-group">
+            <label for="mapid-input">Map:</label>
+            <input
+                type="text"
+                id="mapid-input"
+                name="mapid"
+                list="mapids-list"
+                placeholder="Enter or select map ID..."
+                autocomplete="off"
+            >
+            <datalist id="mapids-list">
+                <!-- <option value="TEST"></option> -->
+            </datalist>
         </span>
-        <span>
-            <label for="mapid">map:</label>
-            <input id="mapid" type="text" value="0000">
-        </span>
-        <!-- <button type="submit">Connect</button> -->
+        <button type="button" id="connect-button">Connect</button>
     </div>
-
     <div id="grid">
     </div>
     <div id="controls">
-        <label for="colorpicker">Couleur :</label>
-        <input id="colorpicker" type="color" value="#000000" title="Choisis ta couleur">
-        <button type="button" class="btn btn-primary" id="refresh">Rafraîchir</button>
+        <label for="colorpicker">Color :</label>
+        <input id="colorpicker" type="color" value="#000000" title="Pick your color">
+        <button type="button" id="refresh-button">Refresh</button>
     </div>
 </body>
