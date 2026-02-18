@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // and use that to populate the mapid input
     // so we don't have to guess the map ids
 
+    console.log("Retrieving maps from the server...")
     const maps_response = await fetch(`/api/v2/maps`, {credentials: "include"})
     const maps_json = await maps_response.json()
 
@@ -27,14 +28,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     //SPOILER:
     // when the response is good, use the resulting JSON
-    // to populate the datalist in the HTML,
+    // to populate the dropdown in HTML,
     // so the user picks among actually available maps
-    const datalist = document.getElementById("mapids-list")
-    maps_json.forEach(map => {
+    const select = document.getElementById("mapid-input")
+    for (const {name, timeout} of maps_json) {
         const option = document.createElement("option")
-        option.value = map.name
-        datalist.appendChild(option)
-    })
+        option.value = name
+        const seconds = timeout / 1000000000
+        option.textContent = `${name} (${seconds}s)`
+        select.appendChild(option)
+        console.log(`Map ${name} added to the dropdown`)
+    }
 
     //TODO:
     // write the connect(..) function below, and attach it

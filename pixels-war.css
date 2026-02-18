@@ -5,6 +5,20 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#connect-dialog {
+    margin-top: 1em;
+    & > * {
+        margin: 1em 2em;
+        background-color: rgb(200, 240, 213);
+        padding: 10px 20px;
+        border-radius: 0.5em;
+    }
+    :first-child > input {
+        width: 40ex;
+    }
+
+}
+
 #grid {
     display: grid;
     margin-bottom: 1rem;
@@ -23,18 +37,4 @@ body {
         height: 100%;
         margin: 0px;
     }
-}
-
-#connect-dialog {
-    margin-top: 1em;
-    & > * {
-        margin: 1em 2em;
-        background-color: rgb(200, 240, 213);
-        padding: 10px 20px;
-        border-radius: 0.5em;
-    }
-    :first-child > input {
-        width: 40ex;
-    }
-
 }
