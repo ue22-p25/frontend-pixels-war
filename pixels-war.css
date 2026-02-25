@@ -21,20 +21,12 @@ body {
 
 #grid {
     display: grid;
-    margin-bottom: 1rem;
-    border: 1px solid black;
-    /*
-     * TODO:
-     * change this code !
-     * not all the maps are 10x10, so your job is to alter
-     * these settings from the JS code, once the map size is known
-     */
-    grid-template-columns: repeat(10, 20px);
-    grid-template-rows: repeat(10, 20px);
-
+    /*TODO: yous js must set grid-template-columns to repeat(n, 1fr)
+      where n is the number of columns in the grid*/
+    /* 80% of the viewport width */
+    width: 80vw;
     &>.pixel {
-        width: 100%;
-        height: 100%;
-        margin: 0px;
+        aspect-ratio: 1/1;
     }
+    margin-bottom: 1rem;
 }
