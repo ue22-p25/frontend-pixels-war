@@ -147,3 +147,16 @@ the next request will trigger a restart, which will
 
 1. restart the maps from the predefined configuration,
 2. and need a delay of about 10 seconds before it can respond to the first request
+
+## If you're done early
+
+you can either
+
+- improve the UI - e.g. add a tool for picking a color from a pixel, use a slider to display remaining time, add animations, or a 3d viewer, or sound effects...
+- or even implement a bot to play the game automatically
+  - either stupidly (the bot is in charge of uploading an image)
+  - or more cleverly (the bot is in charge of picking the next pixel to color,
+    based on the current state of the map)
+- try to figure out a way to cheat the timeout thing
+- if you're really ambitious, you can vibe code a phone app that can play the game
+- or whatever else you can think of...
